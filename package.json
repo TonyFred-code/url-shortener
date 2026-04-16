@@ -1,12 +1,23 @@
 {
   "name": "url-shortening-api-master",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TonyFred-code/url-shortener"
+  },
+  "bugs": {
+    "url": "https://github.com/TonyFred-code/url-shortener/issues"
+  },
+  "author": "Alfred O. Faith (Tony Fred)",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -22,9 +33,13 @@
     "@vitejs/plugin-react": "^6.0.1",
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.4.0",
+    "globals": "^17.5.0",
+    "prettier": "^3.8.3",
     "vite": "^8.0.4"
   }
 }
