@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@theme {
+  /* ---- COLORS ---- */
+  /* Primary */
+
+  --color-blue-400: hsl(180, 66%, 49%);
+  --color-purple-950: hsl(257, 27%, 26%);
+
+  /* Secondary */
+
+  --color-red-400: hsl(0, 87%, 67%);
+
+  /* Neutral */
+
+  --color-gray-400: hsl(0, 0%, 75%);
+  --color-gray-500: hsl(257, 7%, 63%);
+  --color-gray-900: hsl(255, 11%, 22%);
+  --color-gray-950: hsl(260, 8%, 14%);
+}
+
+@layer base {
+  body {
+    @apply text-lg;
+  }
+}
+
+@utility poppins-* {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: --value(--font-weight-*);
+  font-style: normal;
+}
