@@ -31,3 +31,53 @@
   font-weight: --value(--font-weight-*);
   font-style: normal;
 }
+
+@layer components {
+  .menu {
+    & > * {
+      @apply origin-center w-full h-1.25 bg-gray-400 transition-all duration-300 ease-in-out absolute rounded-full;
+    }
+
+    & > *:nth-child(1) {
+      @apply top-0;
+    }
+
+    & > *:nth-child(2) {
+      @apply top-1/2 -translate-y-1/2;
+    }
+
+    & > *:nth-child(3) {
+      @apply bottom-0;
+    }
+
+    &.open > *:nth-child(1) {
+      @apply rotate-45 top-1/2 -translate-y-1/2;
+    }
+
+    &.open > *:nth-child(2) {
+      @apply opacity-0 top-1/2 -translate-y-1/2;
+    }
+
+    &.open > *:nth-child(3) {
+      @apply -rotate-45 bottom-1/2 translate-y-1/2;
+    }
+
+    @apply relative size-8.25 flex flex-col bg-transparent border-none cursor-pointer md:hidden;
+  }
+
+  .feature-card {
+    & .feature__icon-container {
+      @apply flex items-center justify-center rounded-full bg-purple-950 p-5 w-max absolute left-1/2 -translate-x-1/2 -top-1/2 translate-y-full lg:left-[20%];
+    }
+
+    & .feature__header {
+      @apply capitalize text-gray-950 poppins-bold mb-3 text-xl md:text-2xl;
+    }
+
+    & .feature__description {
+      @apply text-gray-500 poppins-medium;
+    }
+
+    @apply text-center bg-white p-6 pt-15 relative rounded-md mt-10 max-w-sm md:text-left lg:p-8 lg:pt-20;
+  }
+}
