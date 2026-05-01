@@ -13,7 +13,7 @@ export default function Features() {
       <div className="relative">
         <div className="w-3 bg-blue-400 h-10/12 top-1/2 -translate-y-1/2 absolute -z-10 left-1/2 -translate-x-1/2 lg:w-10/12 lg:h-3"></div>
         <ul className="flex gap-12 my-12 flex-col items-center lg:flex-row">
-          <li className="">
+          <li>
             <div className="lg:mb-30 feature-card">
               <div className="feature__icon-container">
                 <span className="size-10 lg:size-12 flex items-center justify-center">
@@ -32,7 +32,7 @@ export default function Features() {
               </p>
             </div>
           </li>
-          <li className="">
+          <li>
             <div className="feature-card">
               <div className="feature__icon-container">
                 <span className="size-10 lg:size-12 flex items-center justify-center">
@@ -51,7 +51,7 @@ export default function Features() {
               </p>
             </div>
           </li>
-          <li className="">
+          <li>
             <div className="feature-card lg:-mb-30">
               <div className="feature__icon-container">
                 <span className="size-10 lg:size-12 flex items-center justify-center">
