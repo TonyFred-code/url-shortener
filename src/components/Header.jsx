@@ -6,7 +6,7 @@ export default function Header() {
   const [mobileNavBarOpen, setMobileNavBarOpen] = useState(false);
 
   const toggleMobileNavBarOpen = () => {
-    setMobileNavBarOpen(!mobileNavBarOpen);
+    setMobileNavBarOpen((prev) => !prev);
   };
 
   return (
@@ -21,6 +21,8 @@ export default function Header() {
         aria-label="Open menu"
         className={`${mobileNavBarOpen ? "open" : ""} menu`}
         onClick={toggleMobileNavBarOpen}
+        aria-expanded={`${mobileNavBarOpen ? "true" : "false"}`}
+        aria-controls="navigation"
       >
         <span></span>
         <span></span>
