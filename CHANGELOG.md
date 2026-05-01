@@ -22,3 +22,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Added missing export keyword in `App` component declaration
+
+---
+
+## [0.1.1] - 2026-05-01
+
+### Added
+
+- Added accessibility tags/attributes to navigation lists
+
+### Fixed
+
+- Made package private to prevent accidental package deployment on npm
+
+### Removed
+
+- Cleaned up commented out code
+- Removed redundant classname attributes and class tokens
+
+### Changed
+
+- Switch logic to change state of mobileMenuOpen boolean to functional form
