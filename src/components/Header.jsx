@@ -6,7 +6,7 @@ export default function Header() {
   const [mobileNavBarOpen, setMobileNavBarOpen] = useState(false);
 
   const toggleMobileNavBarOpen = () => {
-    setMobileNavBarOpen(!mobileNavBarOpen);
+    setMobileNavBarOpen((prev) => !prev);
   };
 
   return (
