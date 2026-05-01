@@ -2,7 +2,6 @@ import { useState } from "react";
 
 export default function Form() {
   const [url, setUrl] = useState("");
-  // const [formLoading, setFormLoading] = useState(false);
   const [formError, setFormError] = useState(null);
 
   function inputUrl(e) {
