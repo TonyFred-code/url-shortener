@@ -32,24 +32,24 @@ export default function Footer() {
         </div>
         <ul className="flex gap-6 py-3">
           <li>
-            <span>
+            <a href="https://www.facebook.com/">
               <img src="/images/icon-facebook.svg" alt="Facebook" />
-            </span>
+            </a>
           </li>
           <li>
-            <span>
-              <img src="/images/icon-twitter.svg" alt="twitter" />
-            </span>
+            <a href="https://www.twitter.com/">
+              <img src="/images/icon-twitter.svg" alt="Twitter" />
+            </a>
           </li>
           <li>
-            <span>
+            <a href="https://www.pinterest.com/">
               <img src="/images/icon-pinterest.svg" alt="Pinterest" />
-            </span>
+            </a>
           </li>
           <li>
-            <span>
+            <a href="https://www.instagram.com/">
               <img src="/images/icon-instagram.svg" alt="Instagram" />
-            </span>
+            </a>
           </li>
         </ul>
       </div>
