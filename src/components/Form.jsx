@@ -32,6 +32,8 @@ export default function Form() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          /* Token is exposed client-side -- Known limitation.
+          A serverless proxy would be the production solution */
           Authorization: `Bearer ${import.meta.env.VITE_URL_AUTH_TOKEN}`,
         },
         body: JSON.stringify({ url: inputURL }),
