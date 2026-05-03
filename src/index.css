@@ -25,7 +25,7 @@
 
 @layer base {
   body {
-    @apply text-lg;
+    @apply poppins-normal text-lg;
   }
 }
 
