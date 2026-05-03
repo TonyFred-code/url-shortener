@@ -43,3 +43,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Switch logic to change state of mobileMenuOpen boolean to functional form
+
+---
+
+## [0.2.0] - 2026-05-03
+
+### Added
+
+- Added env for authentication format
+- Included active state variant for primary blue color in theme
+- Created custom hook for managing shortened URLs
+- Created `History` component for showcasing shortened URLs
+- Installed lucide react icons for loading spinner icon
+
+### Changed
+
+- Updated form submission to include `tinyurl` api for creating shortened URL
