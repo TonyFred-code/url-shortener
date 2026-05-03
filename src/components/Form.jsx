@@ -117,7 +117,7 @@ export default function Form() {
           </button>
         </form>
       </div>
-      {history && <History links={history} />}
+      {history.length > 0 && <History links={history} />}
     </section>
   );
 }
