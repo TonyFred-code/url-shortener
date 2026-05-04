@@ -4,7 +4,7 @@ export default function Boost() {
       <h2 className="text-3xl poppins-bold">Boost your links today</h2>
       <button
         type="button"
-        className="rounded-full py-3 px-12 poppins-bold bg-blue-400 capitalize text-xl"
+        className="rounded-full py-3 px-12 poppins-bold bg-blue-400 capitalize text-xl hover:bg-blue-450 cursor-pointer"
       >
         get started
       </button>

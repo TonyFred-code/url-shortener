@@ -8,31 +8,38 @@ export default function Footer() {
         <div className="space-y-4">
           <h3 className="text-white poppins-bold">features</h3>
           <ul className="space-y-0.5 text-white/70">
-            <li>link shortening</li>
-            <li>branded links</li>
-            <li>analytics</li>
+            <li className="cursor-pointer hover:text-blue-400">
+              link shortening
+            </li>
+            <li className="cursor-pointer hover:text-blue-400">
+              branded links
+            </li>
+            <li className="cursor-pointer hover:text-blue-400">analytics</li>
           </ul>
         </div>
         <div className="space-y-4">
           <h3 className="text-white poppins-bold">resources</h3>
           <ul className="space-y-0.5 text-white/70">
-            <li>blog</li>
-            <li>developers</li>
-            <li>support</li>
+            <li className="cursor-pointer hover:text-blue-400">blog</li>
+            <li className="cursor-pointer hover:text-blue-400">developers</li>
+            <li className="cursor-pointer hover:text-blue-400">support</li>
           </ul>
         </div>
         <div className="space-y-4">
           <h3 className="text-white poppins-bold">company</h3>
           <ul className="space-y-0.5 text-white/70">
-            <li>about</li>
-            <li>our team</li>
-            <li>careers</li>
-            <li>contact</li>
+            <li className="cursor-pointer hover:text-blue-400">about</li>
+            <li className="cursor-pointer hover:text-blue-400">our team</li>
+            <li className="cursor-pointer hover:text-blue-400">careers</li>
+            <li className="cursor-pointer hover:text-blue-400">contact</li>
           </ul>
         </div>
-        <ul className="flex gap-6 py-3">
+        <ul className="flex gap-6 py-3 text-white">
           <li>
-            <a href="https://www.facebook.com/">
+            <a
+              href="https://www.facebook.com/"
+              className="cursor-pointer hover:text-blue-400"
+            >
               <img src="/images/icon-facebook.svg" alt="Facebook" />
             </a>
           </li>
@@ -47,7 +54,10 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/">
+            <a
+              href="https://www.instagram.com/"
+              className="hover:text-blue-400 cursor-pointer"
+            >
               <img src="/images/icon-instagram.svg" alt="Instagram" />
             </a>
           </li>

@@ -99,7 +99,7 @@ export default function Form() {
           </div>
           <button
             type="submit"
-            className="text-center poppins-bold text-white bg-blue-400 p-4 outline-none focus-visible:bg-blue-450 rounded-lg lg:px-15 flex items-center justify-center hover:bg-blue-450 cursor-pointer"
+            className="text-center poppins-bold text-white bg-blue-400 p-4 outline-none focus-visible:bg-blue-450 rounded-lg lg:px-15 flex lg:self-start items-center justify-center hover:bg-blue-450 border-4 border-blue-400 hover:border-blue-450 cursor-pointer"
             disabled={formLoading}
           >
             {formLoading ? (
