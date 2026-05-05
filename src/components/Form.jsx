@@ -1,12 +1,12 @@
 import { useState } from "react";
-import useURLHistory from "../hooks/useUrlHistory.jsx";
+import useUrlHistory from "../hooks/useUrlHistory.jsx";
 import History from "./History.jsx";
 import { Loader2 } from "lucide-react";
 
 export default function Form() {
   const [url, setUrl] = useState("");
   const [formError, setFormError] = useState(null);
-  const { history, updateHistory } = useURLHistory();
+  const { history, updateHistory } = useUrlHistory();
   const [formLoading, setFormLoading] = useState(false);
 
   function inputUrl(e) {

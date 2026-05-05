@@ -19,7 +19,7 @@ function getDefaultHistory() {
   }
 }
 
-export default function useURLHistory() {
+export default function useUrlHistory() {
   const [history, setHistory] = useState(getDefaultHistory);
 
   function updateHistory(longUrl, shortUrl) {
