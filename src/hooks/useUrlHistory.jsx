@@ -23,11 +23,13 @@ export default function useURLHistory() {
   const [history, setHistory] = useState(getDefaultHistory);
 
   function updateHistory(longUrl, shortUrl) {
-    if (!history.every((linkItem) => linkItem.longUrl !== longUrl)) return;
+    setHistory((prev) => {
+      if (!prev.every((linkItem) => linkItem.longUrl !== longUrl)) return prev;
 
-    const newHistory = history.concat({ longUrl, shortUrl });
-    setHistory(newHistory);
-    localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(newHistory));
+      const newHistory = prev.concat({ longUrl, shortUrl });
+      localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(newHistory));
+      return newHistory;
+    });
   }
 
   return { updateHistory, history };
