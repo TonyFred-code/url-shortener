@@ -92,3 +92,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed template README document
 - Removed social links svg files
 - Removed unused formStates constant file
+
+---
+
+## [1.0.1] - 2026-05-05
+
+### Added
+
+- Included `sr-only` names for footer section social links
+
+### Changed
+
+- Included API used in README `build-with` section
+- Included directions on setting up environment variables for local development
