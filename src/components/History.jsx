@@ -63,9 +63,9 @@ ShortenedLink.propTypes = {
 
 export default function History({ links }) {
   return (
-    <div className="bg-gray-450 px-4 md:px-8 lg:px-12  py-5 flex justify-center">
+    <div className="bg-gray-450 px-6 md:px-12 lg:px-24 py-5 flex justify-center">
       {links.length > 0 && (
-        <ul className="flex lg:max-w-4xl w-10/12 flex-col gap-3">
+        <ul className="flex lg:max-w-4xl w-full md:w-10/12 flex-col gap-3">
           {links.map((link) => (
             <ShortenedLink
               key={link.longUrl}
