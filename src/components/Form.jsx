@@ -1,12 +1,12 @@
 import { useState } from "react";
-import useURLHistory from "../hooks/useUrlHistory.jsx";
+import useUrlHistory from "../hooks/useUrlHistory.jsx";
 import History from "./History.jsx";
 import { Loader2 } from "lucide-react";
 
 export default function Form() {
   const [url, setUrl] = useState("");
   const [formError, setFormError] = useState(null);
-  const { history, updateHistory } = useURLHistory();
+  const { history, updateHistory } = useUrlHistory();
   const [formLoading, setFormLoading] = useState(false);
 
   function inputUrl(e) {
@@ -32,6 +32,8 @@ export default function Form() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          /* Token is exposed client-side -- Known limitation.
+          A serverless proxy would be the production solution */
           Authorization: `Bearer ${import.meta.env.VITE_URL_AUTH_TOKEN}`,
         },
         body: JSON.stringify({ url: inputURL }),
@@ -72,12 +74,12 @@ export default function Form() {
   }
 
   return (
-    <section className="lg:px-24 lg:py-15">
-      <div className="relative p-4 bg-linear-to-b from-white to-gray-400/20 md:bg-none flex justify-center">
+    <section className="bg-linear-to-b from-white to-gray-450 py-12">
+      <div className="relative px-4 bg-linear-to-b from-white to-gray-450 md:bg-none flex justify-center md:px-6 lg:px-12">
         <div className="w-full h-1/2 absolute left-0 bg-white top-0 z-10"></div>
-        <div className="w-full h-1/2 left-0 bg-gray-400/20 absolute bottom-0 z-10"></div>
+        <div className="w-full h-1/2 left-0 bg-gray-450 absolute bottom-0 z-10"></div>
         <form
-          className="flex flex-col gap-4 bg-[url(/images/bg-shorten-mobile.svg)] bg-size-[75%_60%] md:bg-[url('/images/bg-shorten-desktop.svg')] bg-top-right bg-purple-950 bg-no-repeat p-5 rounded-xl relative z-20 lg:flex-row lg:gap-8 w-10/12 lg:max-w-4xl md:bg-cover"
+          className="flex flex-col gap-4 bg-[url(/images/bg-shorten-mobile.svg)] bg-size-[75%_60%] md:bg-[url('/images/bg-shorten-desktop.svg')] bg-top-right bg-purple-950 bg-no-repeat p-6 rounded-xl relative z-20 lg:flex-row lg:gap-8 md:w-10/12 lg:max-w-4xl md:bg-cover"
           onSubmit={handleSubmit}
           aria-busy={formLoading}
         >
@@ -89,7 +91,7 @@ export default function Form() {
               placeholder="Shorten a link here... "
               value={url}
               onInput={inputUrl}
-              className={`${formError ? "border-red-400 placeholder:text-red-400/50" : "border-white"} w-full bg-white text-lg placeholder:text-lg placeholder:poppins-medium text-gray-900 border-4 user-invalid:border-red-400 outline-none p-4 rounded-lg lg:placeholder:text-xl lg:px-8`}
+              className={`${formError ? "border-red-400 placeholder:text-red-400/50" : "border-white"} w-full bg-white text-lg placeholder:text-lg placeholder:font-medium text-gray-900 border-4 user-invalid:border-red-400 outline-none p-4 rounded-lg lg:placeholder:text-xl lg:px-8`}
             />
             {formError && (
               <span className="italic text-red-400 text-lg">{formError}</span>
@@ -97,7 +99,7 @@ export default function Form() {
           </div>
           <button
             type="submit"
-            className="text-center poppins-bold text-white bg-blue-400 p-4 outline-none focus-visible:bg-blue-450 rounded-lg lg:px-15 flex items-center justify-center hover:bg-blue-450 cursor-pointer"
+            className="text-center font-bold text-white bg-blue-400 p-4 outline-none focus-visible:bg-blue-450 rounded-lg lg:px-15 flex lg:self-start items-center justify-center hover:bg-blue-450 border-4 border-blue-400 hover:border-blue-450 cursor-pointer"
             disabled={formLoading}
           >
             {formLoading ? (
@@ -115,7 +117,7 @@ export default function Form() {
           </button>
         </form>
       </div>
-      {history && <History links={history} />}
+      {history.length > 0 && <History links={history} />}
     </section>
   );
 }

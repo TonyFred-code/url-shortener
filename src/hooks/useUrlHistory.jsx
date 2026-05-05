@@ -2,25 +2,34 @@ import { useState } from "react";
 import { HISTORY_STORAGE_KEY } from "../constants/history.js";
 
 function getDefaultHistory() {
-  const stored = JSON.parse(localStorage.getItem(HISTORY_STORAGE_KEY));
+  const rawStored = localStorage.getItem(HISTORY_STORAGE_KEY);
 
-  if (!stored || !Array.isArray(stored)) {
+  try {
+    const stored = JSON.parse(rawStored);
+
+    if (!stored || !Array.isArray(stored)) {
+      localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify([]));
+      return [];
+    }
+
+    return stored;
+  } catch {
     localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify([]));
     return [];
   }
-
-  return stored;
 }
 
-export default function useURLHistory() {
-  const [history, setHistory] = useState(getDefaultHistory());
+export default function useUrlHistory() {
+  const [history, setHistory] = useState(getDefaultHistory);
 
   function updateHistory(longUrl, shortUrl) {
-    if (!history.every((linkItem) => linkItem.longUrl !== longUrl)) return;
+    setHistory((prev) => {
+      if (!prev.every((linkItem) => linkItem.longUrl !== longUrl)) return prev;
 
-    const newHistory = history.concat({ longUrl, shortUrl });
-    setHistory(newHistory);
-    localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(newHistory));
+      const newHistory = prev.concat({ longUrl, shortUrl });
+      localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(newHistory));
+      return newHistory;
+    });
   }
 
   return { updateHistory, history };

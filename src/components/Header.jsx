@@ -18,10 +18,10 @@ export default function Header() {
       </div>
       <button
         type="button"
-        aria-label="Open menu"
+        aria-label={mobileNavBarOpen ? "Close menu" : "Open menu"}
         className={`${mobileNavBarOpen ? "open" : ""} menu`}
         onClick={toggleMobileNavBarOpen}
-        aria-expanded={`${mobileNavBarOpen ? "true" : "false"}`}
+        aria-expanded={mobileNavBarOpen}
         aria-controls="navigation"
       >
         <span></span>

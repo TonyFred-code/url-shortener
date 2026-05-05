@@ -3,23 +3,46 @@ export default function NavBar() {
     <nav className="hidden flex-1 md:flex justify-between">
       <ul className="flex gap-12 capitalize text-gray-900 items-center">
         <li>
-          <button className="capitalize">features</button>
+          <a
+            href="#"
+            className="capitalize  cursor-pointer text-gray-500 hover:text-gray-950"
+          >
+            features
+          </a>
         </li>
         <li>
-          <button className="capitalize">pricing</button>
+          <a
+            href="#"
+            className="capitalize cursor-pointer text-gray-500 hover:text-gray-950"
+          >
+            pricing
+          </a>
         </li>
         <li>
-          <button className="capitalize">resources</button>
+          <a
+            href="#"
+            className="capitalize cursor-pointer text-gray-500 hover:text-gray-950"
+          >
+            resources
+          </a>
         </li>
       </ul>
       <ul className="flex gap-12 items-center">
         <li>
-          <button className="capitalize">login</button>
+          <a
+            href="#"
+            className="capitalize cursor-pointer text-gray-500 hover:text-gray-950"
+          >
+            login
+          </a>
         </li>
-        <li className="">
-          <button className="bg-blue-400 capitalize rounded-full px-6 py-3 text-white">
+        <li>
+          <a
+            href="#"
+            className="bg-blue-400 capitalize cursor-pointer rounded-full px-6 py-3 text-white hover:bg-blue-450"
+          >
             sign up
-          </button>
+          </a>
         </li>
       </ul>
     </nav>

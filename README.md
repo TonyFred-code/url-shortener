@@ -1,18 +1,122 @@
-# React + Vite
+# Frontend Mentor - Shortly URL shortening API Challenge solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the
+[Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G).
+Frontend Mentor challenges help you improve your coding skills by
+building realistic projects.
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
 
-## React Compiler
+## Overview
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### The challenge
 
-Note: This will impact Vite dev & build performances.
+Users should be able to:
 
-## Expanding the ESLint configuration
+- View the optimal layout for the site depending on their device's screen size
+- Shorten any valid URL
+- See a list of their shortened links, even after refreshing the browser
+- Copy the shortened link to their clipboard in a single click
+- Receive an error message when the `form` is submitted if:
+  - The `input` field is empty
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Screenshot
+
+Target Build:
+
+- General Overview
+  ![Project View](./preview.jpg)
+
+Solution Built:
+
+- Mobile View:
+  ![Solution Mobile View](./images/iPhone-13-PRO-localhost.webp)
+
+- Desktop View:
+  ![Solution Desktop View](./images/Macbook-Air-localhost.webp)
+
+### Links
+
+- Solution URL: [GitHub Source Code](https://github.com/TonyFred-code/url-shortener/)
+- Live Site URL: [Vercel Deployed Demo](https://url-shortener-drab-nu.vercel.app/)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [TailwindCSS](https://tailwindcss.com/) - CSS framework
+- [Vite](https://vite.dev/) - Build Tool
+- [Lucide Icons](https://lucide.dev/icons/) - React Icons Package
+
+### What I learned
+
+- I learnt about the distinction between the visual presentation
+  and structural presentation
+
+### AI Collaboration
+
+Work with `Claude` as described in
+[AGENTS Collaboration Specification](./AGENTS.md) file
+
+## Getting Started
+
+### Prerequisites
+
+Node.js (v20+ recommended)
+Git
+
+### Development Build
+
+To run this project locally, follow these steps:
+
+- Clone your fork of the repository:
+
+```bash
+git clone https://github.com/yourusername/url-shortener.git
+```
+
+- Navigate to the project directory
+
+```bash
+cd url-shortener
+```
+
+- Install dependencies
+
+```bash
+npm install
+```
+
+- Start the development server
+
+```bash
+npm run dev
+```
+
+The app will be available at: `http://localhost:5173`
+
+### Production Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Author
+
+- Personal Website - [alfred.code](https://alfredfaith.me)
+- Frontend Mentor - [@TonyFred-code](https://www.frontendmentor.io/profile/TonyFred-code)
+- X (previously Twitter) - [@alfredfaith35](https://www.x.com/alfredfaith35)

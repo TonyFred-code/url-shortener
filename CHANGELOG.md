@@ -59,3 +59,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated form submission to include `tinyurl` api for creating shortened URL
+
+---
+
+## [1.0.0] - 2026-05-05
+
+### Added
+
+- Added comment highlighting frontend exposure of api auth in build bundle
+- Added individual component for `Footer` component social link icons
+- Added specific off-white/light gray color for form section background
+- Added aria-attributes to ensure visually closed mobile menu is also closed
+  from keyboard users and the accessibility tree
+
+### Changed
+
+- Refactored font family utility by separating font-weight from font-family
+- Included a try-catch guard against malformed JSON parse in useUrlHistory hook
+- Updated initialization of useUrlHistory state hook to prevent unnecessary
+  localStorage access
+- Refactored url history update to prevent stale value access
+- Updated name of custom url history hook following standard casing
+  (`useURLHistory` -> `useUrlHistory`)
+- Updated aria-attributes on mobile menu toggle button
+
+### Fixed
+
+- Corrected conditional rendering of `History` component in `Form` component
+
+### Removed
+
+- Removed template README document
+- Removed social links svg files
+- Removed unused formStates constant file
