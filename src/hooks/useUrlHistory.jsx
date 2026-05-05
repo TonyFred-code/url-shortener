@@ -20,7 +20,7 @@ function getDefaultHistory() {
 }
 
 export default function useURLHistory() {
-  const [history, setHistory] = useState(getDefaultHistory());
+  const [history, setHistory] = useState(getDefaultHistory);
 
   function updateHistory(longUrl, shortUrl) {
     if (!history.every((linkItem) => linkItem.longUrl !== longUrl)) return;
