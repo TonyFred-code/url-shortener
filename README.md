@@ -60,6 +60,7 @@ Solution Built:
 - [TailwindCSS](https://tailwindcss.com/) - CSS framework
 - [Vite](https://vite.dev/) - Build Tool
 - [Lucide Icons](https://lucide.dev/icons/) - React Icons Package
+- [TinyURL](https://tinyurl.com/) - URL shortener API
 
 ### What I learned
 
@@ -99,6 +100,22 @@ cd url-shortener
 ```bash
 npm install
 ```
+
+- Set up environment variables
+
+Copy the example env file and fill in your TinyURL API token:
+
+​`bash
+cp .env.example .env.development
+​`
+
+Then open `.env.development` and set:
+
+​`
+VITE_URL_AUTH_TOKEN=your_tinyurl_api_token_here
+​`
+
+You can get a free API token from [TinyURL](https://tinyurl.com/app/dev).
 
 - Start the development server
 

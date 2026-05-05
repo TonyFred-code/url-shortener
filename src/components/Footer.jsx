@@ -85,6 +85,7 @@ export default function Footer() {
               className="cursor-pointer hover:text-blue-400"
             >
               <FaceBookIcon />
+              <span className="sr-only">Facebook</span>
             </a>
           </li>
           <li>
@@ -93,6 +94,7 @@ export default function Footer() {
               className="cursor-pointer hover:text-blue-400"
             >
               <TwitterIcon />
+              <span className="sr-only">Twitter</span>
             </a>
           </li>
           <li>
@@ -101,6 +103,7 @@ export default function Footer() {
               className="cursor-pointer hover:text-blue-400"
             >
               <PinterestIcon />
+              <span className="sr-only">Pinterest</span>
             </a>
           </li>
           <li>
@@ -109,6 +112,7 @@ export default function Footer() {
               className="hover:text-blue-400 cursor-pointer"
             >
               <InstagramIcon />
+              <span className="sr-only">Instagram</span>
             </a>
           </li>
         </ul>
