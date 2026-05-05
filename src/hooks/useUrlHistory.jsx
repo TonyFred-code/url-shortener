@@ -2,14 +2,21 @@ import { useState } from "react";
 import { HISTORY_STORAGE_KEY } from "../constants/history.js";
 
 function getDefaultHistory() {
-  const stored = JSON.parse(localStorage.getItem(HISTORY_STORAGE_KEY));
+  const rawStored = localStorage.getItem(HISTORY_STORAGE_KEY);
 
-  if (!stored || !Array.isArray(stored)) {
+  try {
+    const stored = JSON.parse(rawStored);
+
+    if (!stored || !Array.isArray(stored)) {
+      localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify([]));
+      return [];
+    }
+
+    return stored;
+  } catch {
     localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify([]));
     return [];
   }
-
-  return stored;
 }
 
 export default function useURLHistory() {
