@@ -91,7 +91,7 @@ export default function Form() {
               placeholder="Shorten a link here... "
               value={url}
               onInput={inputUrl}
-              className={`${formError ? "border-red-400 placeholder:text-red-400/50" : "border-white"} w-full bg-white text-lg placeholder:text-lg placeholder:poppins-medium text-gray-900 border-4 user-invalid:border-red-400 outline-none p-4 rounded-lg lg:placeholder:text-xl lg:px-8`}
+              className={`${formError ? "border-red-400 placeholder:text-red-400/50" : "border-white"} w-full bg-white text-lg placeholder:text-lg placeholder:font-medium text-gray-900 border-4 user-invalid:border-red-400 outline-none p-4 rounded-lg lg:placeholder:text-xl lg:px-8`}
             />
             {formError && (
               <span className="italic text-red-400 text-lg">{formError}</span>
@@ -99,7 +99,7 @@ export default function Form() {
           </div>
           <button
             type="submit"
-            className="text-center poppins-bold text-white bg-blue-400 p-4 outline-none focus-visible:bg-blue-450 rounded-lg lg:px-15 flex lg:self-start items-center justify-center hover:bg-blue-450 border-4 border-blue-400 hover:border-blue-450 cursor-pointer"
+            className="text-center font-bold text-white bg-blue-400 p-4 outline-none focus-visible:bg-blue-450 rounded-lg lg:px-15 flex lg:self-start items-center justify-center hover:bg-blue-450 border-4 border-blue-400 hover:border-blue-450 cursor-pointer"
             disabled={formLoading}
           >
             {formLoading ? (

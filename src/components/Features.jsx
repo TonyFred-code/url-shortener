@@ -2,7 +2,7 @@ export default function Features() {
   return (
     <section className="bg-gray-450 px-6 md:px-12 lg:px-24 py-15 text-center flex flex-col gap-4 md:items-center">
       <header className="space-y-3 md:max-w-md">
-        <h2 className="capitalize text-gray-950 text-2xl poppins-bold lg:text-4xl">
+        <h2 className="capitalize text-gray-950 text-2xl font-bold lg:text-4xl">
           advanced statistics
         </h2>
         <p className="text-gray-500">

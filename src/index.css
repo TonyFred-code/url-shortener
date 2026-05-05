@@ -22,19 +22,15 @@
   /* ACTIVE Primary */
 
   --color-blue-450: hsl(180, 80%, 63%);
+
+  /* FONT */
+  --font-poppins: "Poppins", sans-serif;
 }
 
 @layer base {
   body {
-    @apply poppins-normal text-lg;
+    @apply font-poppins text-lg;
   }
-}
-
-@utility poppins-* {
-  font-family: "Poppins", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: --value(--font-weight-*);
-  font-style: normal;
 }
 
 @layer components {
@@ -76,11 +72,11 @@
     }
 
     & .feature__header {
-      @apply capitalize text-gray-950 poppins-bold mb-3 text-xl md:text-2xl;
+      @apply capitalize text-gray-950 font-bold mb-3 text-xl md:text-2xl;
     }
 
     & .feature__description {
-      @apply text-gray-500 poppins-medium;
+      @apply text-gray-500 font-medium;
     }
 
     @apply text-center bg-white p-6 pt-15 relative rounded-md mt-10 max-w-sm md:text-left lg:p-8 lg:pt-20;

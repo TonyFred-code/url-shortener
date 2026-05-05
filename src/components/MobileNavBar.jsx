@@ -7,7 +7,7 @@ export default function MobileNavBar({ open }) {
       id="navigation"
     >
       <div className=" p-7 rounded-xl text-white capitalize flex flex-col gap-5 bg-purple-950">
-        <ul className="flex flex-col items-center gap-2 poppins-bold text-center *:w-full">
+        <ul className="flex flex-col items-center gap-2 font-bold text-center *:w-full">
           <li>
             <a
               href="#"
@@ -34,7 +34,7 @@ export default function MobileNavBar({ open }) {
           </li>
         </ul>
         <hr className="opacity-10" />
-        <ul className="flex flex-col items-center gap-3 poppins-bold text-center *:w-full">
+        <ul className="flex flex-col items-center gap-3 font-bold text-center *:w-full">
           <li className="">
             <a
               href="#"
