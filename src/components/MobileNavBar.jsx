@@ -3,8 +3,10 @@ import { bool } from "prop-types";
 export default function MobileNavBar({ open }) {
   return (
     <nav
-      className={`absolute z-10 top-full ${open ? "max-h-200" : "max-h-0"} md:hidden overflow-hidden transition-all duration-300 ease-in w-10/12 left-1/2 -translate-x-1/2`}
+      className={`absolute z-10 top-full ${open ? "max-h-200" : "max-h-0 pointer-events-none"} md:hidden overflow-hidden transition-all duration-300 ease-in w-10/12 left-1/2 -translate-x-1/2`}
       id="navigation"
+      aria-hidden={!open}
+      inert={!open ? true : undefined}
     >
       <div className=" p-7 rounded-xl text-white capitalize flex flex-col gap-5 bg-purple-950">
         <ul className="flex flex-col items-center gap-2 font-bold text-center *:w-full">
