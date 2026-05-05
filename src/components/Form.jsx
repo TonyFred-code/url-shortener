@@ -74,10 +74,10 @@ export default function Form() {
   }
 
   return (
-    <section className="lg:px-24 lg:py-15">
-      <div className="relative p-4 bg-linear-to-b from-white to-gray-400/20 md:bg-none flex justify-center">
+    <section className="bg-linear-to-b from-white to-gray-450 py-12">
+      <div className="relative px-4 bg-linear-to-b from-white to-gray-450 md:bg-none flex justify-center md:px-6 lg:px-12">
         <div className="w-full h-1/2 absolute left-0 bg-white top-0 z-10"></div>
-        <div className="w-full h-1/2 left-0 bg-gray-400/20 absolute bottom-0 z-10"></div>
+        <div className="w-full h-1/2 left-0 bg-gray-450 absolute bottom-0 z-10"></div>
         <form
           className="flex flex-col gap-4 bg-[url(/images/bg-shorten-mobile.svg)] bg-size-[75%_60%] md:bg-[url('/images/bg-shorten-desktop.svg')] bg-top-right bg-purple-950 bg-no-repeat p-5 rounded-xl relative z-20 lg:flex-row lg:gap-8 w-10/12 lg:max-w-4xl md:bg-cover"
           onSubmit={handleSubmit}

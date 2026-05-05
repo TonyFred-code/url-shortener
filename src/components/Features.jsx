@@ -1,6 +1,6 @@
 export default function Features() {
   return (
-    <section className="bg-gray-400/20 px-6 lg:px-24 lg:py-15 py-10 text-center flex flex-col gap-4 md:items-center">
+    <section className="bg-gray-450 px-6 md:px-12 lg:px-24 py-15 text-center flex flex-col gap-4 md:items-center">
       <header className="space-y-3 md:max-w-md">
         <h2 className="capitalize text-gray-950 text-2xl poppins-bold lg:text-4xl">
           advanced statistics
@@ -11,7 +11,7 @@ export default function Features() {
         </p>
       </header>
       <div className="relative">
-        <div className="w-3 bg-blue-400 h-10/12 top-1/2 -translate-y-1/2 absolute -z-10 left-1/2 -translate-x-1/2 lg:w-10/12 lg:h-3"></div>
+        <div className="w-3 bg-blue-400 h-10/12 top-1/2 -translate-y-1/2 absolute left-1/2 -translate-x-1/2 lg:w-10/12 lg:h-3"></div>
         <ul className="flex gap-12 my-12 flex-col items-center lg:flex-row">
           <li>
             <div className="lg:mb-30 feature-card">

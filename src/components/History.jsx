@@ -47,7 +47,7 @@ function ShortenedLink({ longUrl, shortenedUrl }) {
     <li className="bg-white rounded flex p-6 flex-col md:flex-row md:items-center gap-8">
       <span className="flex-1 text-gray-900 truncate min-w-0">{longUrl}</span>
       <div className="flex gap-3 md:items-center flex-col md:flex-row">
-        <a href={shortenedUrl} className="text-blue-400">
+        <a href={shortenedUrl} className="text-blue-400  truncate min-w-0">
           {shortenedUrl}
         </a>
         <CopyButton text={shortenedUrl} />
@@ -63,7 +63,7 @@ ShortenedLink.propTypes = {
 
 export default function History({ links }) {
   return (
-    <div className="bg-gray-400/20 p-4 flex justify-center">
+    <div className="bg-gray-450 px-4 md:px-8 lg:px-12  py-5 flex justify-center">
       {links.length > 0 && (
         <ul className="flex lg:max-w-4xl w-10/12 flex-col gap-3">
           {links.map((link) => (
